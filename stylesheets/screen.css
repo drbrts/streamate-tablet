@@ -6799,9 +6799,10 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 /* line 14, ../sass/screen.sass */
 body, html {
   overflow: hidden;
+  background: black;
 }
 
-/* line 17, ../sass/screen.sass */
+/* line 18, ../sass/screen.sass */
 #header {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -6811,9 +6812,22 @@ body, html {
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+/* line 22, ../sass/screen.sass */
+.sidebar-open #header {
+  -webkit-transform: translateY(0%);
+  -moz-transform: translateY(0%);
+  -ms-transform: translateY(0%);
+  -o-transform: translateY(0%);
+  transform: translateY(0%);
 }
 
-/* line 20, ../sass/screen.sass */
+/* line 25, ../sass/screen.sass */
 #wrapper {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -6823,25 +6837,22 @@ body, html {
   -moz-transition-duration: 0.4s;
   -o-transition-duration: 0.4s;
   transition-duration: 0.4s;
-  -webkit-transform: translateY(-41px);
-  -moz-transform: translateY(-41px);
-  -ms-transform: translateY(-41px);
-  -o-transform: translateY(-41px);
-  transform: translateY(-41px);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   position: relative;
   width: 100%;
   height: 100%;
+  margin-top: 0;
+  background: blue;
 }
-/* line 27, ../sass/screen.sass */
+/* line 34, ../sass/screen.sass */
 .sidebar-open #wrapper {
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
+  margin-top: 41px;
+  padding-bottom: 41px;
 }
 
-/* line 30, ../sass/screen.sass */
+/* line 38, ../sass/screen.sass */
 #sidebar {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -6864,7 +6875,7 @@ body, html {
   height: 100%;
   background: red;
 }
-/* line 41, ../sass/screen.sass */
+/* line 49, ../sass/screen.sass */
 .sidebar-open #sidebar {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
@@ -6873,7 +6884,7 @@ body, html {
   transform: translateX(0);
 }
 
-/* line 44, ../sass/screen.sass */
+/* line 52, ../sass/screen.sass */
 #video {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -6895,9 +6906,11 @@ body, html {
   transform: scale(1);
   width: 100%;
   height: 100%;
-  background: blue;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-/* line 52, ../sass/screen.sass */
+/* line 62, ../sass/screen.sass */
 .sidebar-open #video {
   -webkit-transform: scale(0.69231);
   -moz-transform: scale(0.69231);

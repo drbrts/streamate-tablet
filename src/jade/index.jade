@@ -7,12 +7,13 @@ link(href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css', r
 link(href='/stylesheets/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
 
 body.sidebar-open
-  header.navbar.navbar-static-top.navbar-inverse
-    .navbar-inner.container-fluid
-      a.brand(href='#') Streamate iPad Tablet Test
+  header#header.navbar.navbar-fixed-top.navbar-inverse
+    .navbar-inner
+      .container-fluid
+        a.brand(href='#') Streamate iPad Tablet Test
 
-      .pull-right
-        a#toggle-sidebar.btn.btn-small Toggle Sidebar
+        .pull-right
+          a#toggle-sidebar.btn.btn-small Toggle Sidebar
 
   section#wrapper
     video#video(src="http://ia700408.us.archive.org/26/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4", autoplay, muted, loop, controls=false)

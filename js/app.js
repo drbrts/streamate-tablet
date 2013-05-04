@@ -2,13 +2,11 @@
 (function() {
 
   $(function() {
-    var $toggle, $video, aspect, getHeight, getRatio, getWidth, init, setBodySize, setVideoSize, sidebarOpened, tap, toggleSidebar, tooTall, transition_end, transition_start;
+    var $toggle, $video, aspect, getHeight, getRatio, getWidth, init, setBodySize, setVideoSize, sidebarOpened, tap, toggleSidebar, tooTall;
     aspect = {
       width: 16,
       height: 9
     };
-    transition_end = 'webkitTransitionEnd transitionend';
-    transition_start = 'webkitTransitionStart transitionstart';
     tap = 'click touchend';
     init = function() {
       setBodySize();
@@ -41,20 +39,22 @@
       }, 1);
     };
     toggleSidebar = function(e) {
+      var $body;
       if (e != null) {
         e.preventDefault();
       }
-      return $('body').toggleClass('sidebar-open');
+      return $body = $('body').toggleClass('sidebar-open');
     };
     setBodySize = function() {
       return $('body').height(window.innerHeight).width(window.innerWidth);
     };
-    $toggle = $('#toggle-sidebar').on(tap, function() {
+    $toggle = $('#toggle-sidebar').on(tap, function(e) {
+      e.preventDefault();
       toggleSidebar();
       return setVideoSize();
     });
-    $(document).on('touchstart touchmove', false);
-    $video = $('#video').on(tap, function() {
+    $video = $('#video').on(tap, function(e) {
+      e.preventDefault();
       if (this.paused || this.ended) {
         this.play();
       }
