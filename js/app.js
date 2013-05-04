@@ -2,13 +2,18 @@
 (function() {
 
   $(function() {
-    var aspect, getHeight, getRatio, getWidth, setBodySize, setVideoSize, sidebarOpened, tap, toggleSidebar, tooTall, transition_end;
+    var $toggle, $video, aspect, getHeight, getRatio, getWidth, init, setBodySize, setVideoSize, sidebarOpened, tap, toggleSidebar, tooTall, transition_end, transition_start;
     aspect = {
       width: 16,
       height: 9
     };
     transition_end = 'webkitTransitionEnd transitionend';
+    transition_start = 'webkitTransitionStart transitionstart';
     tap = 'click touchend';
+    init = function() {
+      setBodySize();
+      return setVideoSize();
+    };
     getRatio = function() {
       return aspect.width / aspect.height;
     };
@@ -31,34 +36,34 @@
       if (!sidebarOpened()) {
         height = window.innerHeight;
       }
-      return video.height(height);
+      return setTimeout(function() {
+        return video.height(height);
+      }, 1);
     };
-    setVideoSize();
     toggleSidebar = function(e) {
       if (e != null) {
         e.preventDefault();
       }
-      $('body').toggleClass('sidebar-open');
-      return $('#toggle-sidebar').one(transition_end, function() {
-        if (!sidebarOpened()) {
-          return setVideoSize();
-        }
-      });
+      return $('body').toggleClass('sidebar-open');
     };
-    $('#toggle-sidebar').on(tap, toggleSidebar);
     setBodySize = function() {
-      $('body').height(window.innerHeight).width(window.innerWidth);
+      return $('body').height(window.innerHeight).width(window.innerWidth);
     };
-    setBodySize();
+    $toggle = $('#toggle-sidebar').on(tap, function() {
+      toggleSidebar();
+      return setVideoSize();
+    });
     $(document).on('touchstart touchmove', false);
-    $('#video').on(tap, function() {
+    $video = $('#video').on(tap, function() {
       if (this.paused || this.ended) {
         this.play();
       }
       if (!sidebarOpened()) {
-        return toggleSidebar();
+        toggleSidebar();
       }
+      return setVideoSize();
     });
+    init();
   });
 
 }).call(this);

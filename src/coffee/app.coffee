@@ -4,7 +4,12 @@ $ ->
     height: 9
 
   transition_end = 'webkitTransitionEnd transitionend'
+  transition_start = 'webkitTransitionStart transitionstart'
   tap = 'click touchend'
+
+  init = () ->
+    setBodySize()
+    setVideoSize()
 
   getRatio = () -> aspect.width / aspect.height
   getHeight = (w) -> w / getRatio()
@@ -16,29 +21,32 @@ $ ->
     video = $('video')
     height = getHeight video.width()
     height = window.innerHeight unless sidebarOpened()
-    video.height height
 
-    # video.height(getHeight video.width())
-
-  setVideoSize()
+    setTimeout ->
+      video.height height
+    , 1
 
   toggleSidebar = (e) ->
     e?.preventDefault()
     $('body').toggleClass 'sidebar-open'
-    $('#toggle-sidebar').one transition_end, () ->
-      setVideoSize() unless sidebarOpened()
-
-
-  $('#toggle-sidebar').on tap, toggleSidebar
 
   setBodySize = () ->
     $('body').height(window.innerHeight).width(window.innerWidth)
-    return
 
-  setBodySize()
+
+  $toggle = $('#toggle-sidebar')
+    .on tap, () ->
+      toggleSidebar()
+      setVideoSize()
 
   $(document).on 'touchstart touchmove', false
-  $('#video').on tap, () ->
-    @play() if @paused or @ended
-    toggleSidebar() unless sidebarOpened()
+
+  $video = $('#video')
+    .on tap, () ->
+      @play() if @paused or @ended
+      toggleSidebar() unless sidebarOpened()
+      setVideoSize()
+
+  init()
+
   return
