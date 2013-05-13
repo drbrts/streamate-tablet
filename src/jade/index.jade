@@ -2,27 +2,29 @@
 meta(charset='utf-8')
 meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
 title Jade, Sass, and Coffeescript; Oh my!
-link(href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css', rel='stylesheet')
-link(href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css', rel='stylesheet')
+link(href='//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css', rel='stylesheet')
 link(href='/stylesheets/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
 
-body.sidebar-open
-  header#header.navbar.navbar-fixed-top.navbar-inverse
+//- header#header.navbar.navbar-fixed-top.navbar-inverse
+  .navbar-inner
+    .container-fluid
+      a.brand(href='#') Streamate iPad Tablet Test
+
+      .pull-right
+        a#toggle-sidebar.btn.btn-small Toggle Sidebar
+
+section#wrapper
+  video#video(src='http://ia700408.us.archive.org/26/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4', autoplay, muted, loop, controls=false)
+  #info.navbar.navbar-inverse.navbar-static-top
     .navbar-inner
       .container-fluid
-        a.brand(href='#') Streamate iPad Tablet Test
+        a.brand(href='#') Big Buck Hunny
 
-        .pull-right
-          a#toggle-sidebar.btn.btn-small Toggle Sidebar
+  include sidebar/_main
 
-  section#wrapper
-    video#video(src="http://ia700408.us.archive.org/26/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4", autoplay, muted, loop, controls=false)
-    #sidebar
-    #info
-
-  script(src='//code.jquery.com/jquery-1.9.1.min.js')
-  script(src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js')
-  script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js')
-  script(src='/js/app.js')
-  script
-    document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')
+script(src='//code.jquery.com/jquery-1.9.1.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js')
+script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js')
+script(src='/js/app.js')
+script document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

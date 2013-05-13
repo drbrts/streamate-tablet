@@ -1,0 +1,48 @@
+#chat
+  @include box-sizing(border-box)
+  position: relative
+  width: 100%
+  height: 100%
+  padding: 2.857em $gutter $gutter
+  background: $red
+
+#chat-head
+  @include box-sizing(border-box)
+  position: absolute
+  top: 0
+  left: 0
+  padding: $gutter
+  height: auto
+
+  form
+    margin: 0
+    float: none
+
+  .controls
+    position: relative
+
+  button
+    position: absolute
+    top: .45em
+    right: .45em
+    margin: 0
+    border-radius: 48%
+
+#chat-body
+  height: 100%
+  background: teal
+
+  .well
+    @include box-sizing(border-box)
+    padding: 0
+    height: 100%
+    overflow-y: scroll
+    overflow-x: hidden
+
+
+#chat-output
+  margin: 0
+
+#chat-submit
+  display: inline-block
+  @include rotate(180deg)

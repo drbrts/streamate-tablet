@@ -1,0 +1,120 @@
+!!! default
+meta(charset='utf-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0')
+title Jade, Sass, and Coffeescript; Oh my!
+link(href='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.no-icons.min.css', rel='stylesheet')
+link(href='//netdna.bootstrapcdn.com/font-awesome/3.0.2/css/font-awesome.css', rel='stylesheet')
+style
+  .page-header a {
+    color: #000;
+  }
+
+nav.navbar.navbar-static-top.navbar-inverse
+  .navbar-inner
+    .container
+      ul.nav
+        li: a Home
+        li: a Search
+        li: a New
+        li: a Support
+        li: a Account
+        li: a Calendar
+
+br
+main.container
+  .container
+    .navbar
+      .navbar-inner(style="padding:0")
+        .container
+          ul.nav
+            li: a Favorites
+            li: a Mail
+            li: a Manage
+            li: a Purchases
+
+          .pull-right
+            a.brand My Account
+
+    .row
+
+      //- Sidebar
+      .span3(data-spy="affix", data-offset-top="100", style="top:20px")
+        ul.nav.nav-tabs.nav-stacked
+          li: a(href="#contact-info") Contact Info
+          li: a(href="#payment-info") Payment Info
+          li: a(href="#personal-profile") Personal Profile
+          li: a(href="#daily-spending-limit") Daily Spending Limit
+          li: a(href="#password") Password
+          li: a(href="#email-preferences") Email Preferences
+          li: a(href="#options") Streamate Options
+
+      //- Main Content
+      .span9.pull-right
+        //- Contact Info
+        .well(style="padding-top:0")
+          .page-header
+            h3: a(name="contact-info") Contact Info
+          .form-horizontal
+            .control-group
+              label.control-label My Display Name
+              .controls: input(type="text")
+            .control-group
+              label.control-label First Name
+              .controls: input(type="text")
+            .control-group
+              label.control-label Last Name
+              .controls: input(type="text")
+            .control-group
+              label.control-label Street Address
+              .controls: input(type="text")
+            .control-group
+              label.control-label Postal Code
+              .controls: input(type="text")
+            .control-group
+              label.control-label Country
+              .controls: select
+                  option United States
+            .control-group
+              label.control-label Phone Number
+              .controls: input(type="text")  (Optional)
+          small We require this information as a means of limiting fraudulent activity on our site. Most of it is collected when you first sign up with our site. We do not resell or redistribute this information, and will only use this information to contact you if absolutely necessary. For more information please review our privacy policy and terms and conditions. If you still have questions please contact customer support.
+
+        //- Payment Information
+        .page-header
+          h3
+            a(name="payment-info") Payment information
+        .well
+          a(href="#") Click here to update your payment information.
+
+        //- Personal Profile
+        .page-header
+          h3
+            a(name="personal-profile") Personal Profile
+        .form-horizontal
+          .control-group
+            label.control-label Sexual Preference
+            .controls: select
+              option Straight
+              option Gay
+              option Bisexual
+          .control-group
+            label.control-label Gender
+            .controls: select
+              option Prefer not to say
+          .control-group
+            label.control-label Current Time
+            .controls: select
+              option 04:20
+
+
+
+
+
+
+
+script(src='//code.jquery.com/jquery-1.9.1.min.js')
+script(src='//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js')
+script(src='//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js')
+script(src='/js/app.js')
+script
+  document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')

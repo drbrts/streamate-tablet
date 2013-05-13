@@ -1,52 +1,58 @@
 $ ->
-  aspect =
-    width: 16
-    height: 9
+  $toggle = $('#toggle')
+  $sidebar = $('#sidebar')
 
-  tap = 'click touchend'
+  Hammer($toggle[0]).on 'tap', () ->
+    $('html').toggleClass('fullscreen')
 
-  init = () ->
-    setBodySize()
-    setVideoSize()
+  # aspect =
+  #   width: 16
+  #   height: 9
 
-  getRatio = () -> aspect.width / aspect.height
-  getHeight = (w) -> w / getRatio()
-  getWidth = (h) -> h * getRatio()
-  tooTall = (h) -> ( h <= window.innerHeight )?
-  sidebarOpened = () -> ( $('body').hasClass('sidebar-open') is true )
+  # tap = 'click touchend'
 
-  setVideoSize = () ->
-    video = $('video')
-    height = getHeight video.width()
-    height = window.innerHeight unless sidebarOpened()
+  # init = () ->
+  #   setBodySize()
+  #   setVideoSize()
 
-    setTimeout ->
-      video.height height
-    , 1
+  # getRatio = () -> aspect.width / aspect.height
+  # getHeight = (w) -> w / getRatio()
+  # getWidth = (h) -> h * getRatio()
+  # tooTall = (h) -> ( h <= window.innerHeight )?
+  # sidebarClosed = () -> ( $('body').hasClass('sidebar-closed') is true )
 
-  toggleSidebar = (e) ->
-    e?.preventDefault()
-    $body = $('body').toggleClass 'sidebar-open'
+  # setVideoSize = () ->
+  #   video = $('video')
+  #   height = getHeight video.width()
+  #   height = window.innerHeight if sidebarClosed()
 
-  setBodySize = () ->
-    $('body').height(window.innerHeight).width(window.innerWidth)
+  #   setTimeout ->
+  #     video.height height
+  #   , 1
+
+  # toggleSidebar = (e) ->
+  #   e?.preventDefault()
+  #   $body = $('body').toggleClass 'sidebar-closed'
+
+  # setBodySize = () ->
+  #   $('body').height(window.innerHeight).width(window.innerWidth)
 
 
-  $toggle = $('#toggle-sidebar')
-    .on tap, (e) ->
-      e.preventDefault()
-      toggleSidebar()
-      setVideoSize()
+  # $toggle = $('#toggle-sidebar')
+  #   .on tap, (e) ->
+  #     e.preventDefault()
+  #     toggleSidebar()
+  #     setVideoSize()
 
-  # $(document).on 'touchstart touchmove', false
+  # $(document).on 'touchstart', false
 
-  $video = $('#video')
-    .on tap, (e) ->
-      e.preventDefault()
-      @play() if @paused or @ended
-      toggleSidebar() unless sidebarOpened()
-      setVideoSize()
+  # $video = $('#video')
+  #   .on tap, (e) ->
+  #     e.preventDefault()
+  #     @play() if @paused or @ended
+  #     toggleSidebar() unless sidebarOpened()
+  #     setVideoSize()
 
-  init()
+  # # init()
 
-  return
+  # return

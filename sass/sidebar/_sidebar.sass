@@ -1,0 +1,74 @@
+$navbar-height: 2.929em
+$gutter: 0.357em
+
+
+#sidebar
+  @include transform-transition
+  @include translateX(0)
+  @include box-sizing(border-box)
+  position: absolute
+  right: 0
+  top: 0
+  bottom: 0
+  width: 30.769230769%
+  padding: $navbar-height 0
+  border-left: 1px solid $red
+
+  .fullscreen &
+    @include translateX(100%)
+
+#sidehead
+  position: absolute
+  top: 0
+  left: 0
+  height: auto
+
+#sidefoot
+  position: absolute
+  left: 0
+  bottom: 0
+  height: auto
+
+  .navbar-inner
+    padding: 0
+
+  .nav
+    margin: 0
+    display: table
+    width: 100%
+
+    li
+      display: table-cell
+      width: 1%
+      float: none
+
+      a
+        text-align: center
+        padding: 0.357em 0
+        font-weight: bold
+        text-align: center
+
+  i
+    font-size: 2em
+
+#toggle
+  width: 5em
+  position: absolute
+  margin-top: 2.5em
+  top: 50%
+
+  @include box-sizing(border-box)
+  @include apply-origin(bottom left, true)
+  @include rotate(-90deg)
+  @include border-bottom-radius(0)
+
+  i
+    display: inline-block
+    @include transform-transition
+
+  .fullscreen & i
+    @include rotate(180deg)
+
+@import chat
+@import users
+@import models
