@@ -3,6 +3,11 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
+$sidebar-width: 30.769230769%
+$content-width: 69.230769231%
+
+$content-scale: .69230769231
+
 @import compass
 @import variables
 @import bootstrap
@@ -29,8 +34,7 @@ section
 
 // Imports
 @import "header"
-@import "sidebar/sidebar"
-
+@import "sidebar/main"
 
 #wrapper
   @include transform-transition
@@ -56,9 +60,7 @@ section
   top: 0
   left: 0
 
-  .sidebar-closed &
+  .fullscreen &
     @include scale(1)
 
-#info
-  @include transform-transition
-  @include apply-origin(top left, true)
+@import "info"

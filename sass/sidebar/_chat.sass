@@ -6,27 +6,28 @@
   padding: 2.857em $gutter $gutter
   background: $red
 
-#chat-head
-  @include box-sizing(border-box)
-  position: absolute
-  top: 0
-  left: 0
-  padding: $gutter
-  height: auto
-
-  form
-    margin: 0
-    float: none
-
-  .controls
-    position: relative
-
-  button
+  header
+    @include box-sizing(border-box)
+    width: 100%
     position: absolute
-    top: .45em
-    right: .45em
-    margin: 0
-    border-radius: 48%
+    top: 0
+    left: 0
+    padding: $gutter
+    height: auto
+
+    form
+      margin: 0
+      float: none
+
+    .controls
+      position: relative
+
+    button
+      position: absolute
+      top: .45em
+      right: .45em
+      margin: 0
+      border-radius: 48%
 
 #chat-body
   height: 100%

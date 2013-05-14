@@ -6,21 +6,27 @@
 <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 <section id="wrapper">
   <video id="video" src="http://ia700408.us.archive.org/26/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4" autoplay muted loop></video>
-  <div id="info" class="navbar navbar-inverse navbar-static-top">
+  <section id="info" class="navbar navbar-inverse navbar-static-top">
     <div class="navbar-inner">
-      <div class="container-fluid"><a href="#" class="brand">Big Buck Hunny</a></div>
+      <div class="container-fluid"><a href="#" class="brand">Big Buck Hunny</a>
+        <div class="pull-right">
+          <ul class="nav">
+            <li><a><i class="icon-remove-sign"></i></a></li>
+          </ul>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
   <section id="sidebar">
-    <section id="sidehead" class="navbar navbar-static-top navbar-inverse">
+    <header id="sidebar-header" class="navbar navbar-static-top navbar-inverse">
       <div class="navbar-inner">
         <div class="pull-right"><a class="brand">Company Brand</a></div>
         <div class="btn btn-primary">Join In</div>
       </div>
-    </section>
-    <section class="tab-content">
-      <section id="chat" class="tab-pane">
-        <section id="chat-head">
+    </header>
+    <section id="sidebar-body" class="tab-content">
+      <section id="chat" class="tab-pane active">
+        <header>
           <form class="navbar-search">
             <div class="controls">
               <input class="search-query input-block-level">
@@ -29,7 +35,7 @@
               </button>
             </div>
           </form>
-        </section>
+        </header>
         <div id="chat-body">
           <div class="well">
             <ul id="chat-output" class="unstyled"></ul>
@@ -45,7 +51,7 @@
           </ul>
         </section>
       </section>
-      <section id="models" class="tab-panel active">
+      <section id="models" class="tab-panel">
         <div class="container-fluid">
           <div class="row-fluid">
             <div class="span6">
@@ -82,7 +88,7 @@
         </div>
       </section>
     </section>
-    <section id="sidefoot" class="navbar navbar-static-top navbar-inverse">
+    <footer id="sidebar-footer" class="navbar navbar-static-top navbar-inverse">
       <div class="navbar-inner">
         <ul class="nav">
           <li class="active"><a href="#chat" data-toggle="tab"><i class="icon-comments"></i></a></li>
@@ -90,8 +96,8 @@
           <li><a href="#models" data-toggle="tab"><i class="icon-th-large"></i></a></li>
         </ul>
       </div>
-    </section>
-    <div id="toggle" class="btn btn-small"><i class="icon-chevron-down"></i></div>
+    </footer>
+    <div id="toggle" class="btn btn-mini"><i class="icon-chevron-down"></i></div>
   </section>
 </section>
 <script src="//code.jquery.com/jquery-1.9.1.min.js"></script>

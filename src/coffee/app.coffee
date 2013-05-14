@@ -1,9 +1,19 @@
 $ ->
   $toggle = $('#toggle')
   $sidebar = $('#sidebar')
+  $video = $('#video')
+  $html = $('html')
 
-  Hammer($toggle[0]).on 'tap', () ->
-    $('html').toggleClass('fullscreen')
+  toggleFullScreen = () ->
+    $html.toggleClass('fullscreen')
+
+  toggleInfoBar = () ->
+    $html.toggleClass('info-hidden')
+
+  Hammer($toggle[0]).on 'tap', toggleFullScreen
+  Hammer($sidebar[0]).on 'swiperight', toggleFullScreen
+  Hammer($video[0]).on 'tap', toggleInfoBar
+  return
 
   # aspect =
   #   width: 16

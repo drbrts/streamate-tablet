@@ -1,5 +1,5 @@
-$navbar-height: 2.929em
-$gutter: 0.357em
+$navbar-height: 41px
+$gutter: 4px
 
 
 #sidebar
@@ -10,20 +10,25 @@ $gutter: 0.357em
   right: 0
   top: 0
   bottom: 0
-  width: 30.769230769%
+  width: $sidebar-width
   padding: $navbar-height 0
-  border-left: 1px solid $red
+  border-left: 1px solid black
 
   .fullscreen &
     @include translateX(100%)
 
-#sidehead
+#sidebar-header
   position: absolute
   top: 0
   left: 0
+  width: 100%
   height: auto
 
-#sidefoot
+#sidebar-body
+  overflow: hidden
+
+#sidebar-footer
+  width: 100%
   position: absolute
   left: 0
   bottom: 0
@@ -44,7 +49,7 @@ $gutter: 0.357em
 
       a
         text-align: center
-        padding: 0.357em 0
+        padding: $gutter 0
         font-weight: bold
         text-align: center
 
@@ -52,9 +57,9 @@ $gutter: 0.357em
     font-size: 2em
 
 #toggle
-  width: 5em
+  width: 10em
   position: absolute
-  margin-top: 2.5em
+  margin-top: 5em
   top: 50%
 
   @include box-sizing(border-box)
