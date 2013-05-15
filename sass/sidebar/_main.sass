@@ -1,7 +1,6 @@
 $navbar-height: 41px
 $gutter: 4px
 
-
 #sidebar
   @include transform-transition
   @include translateX(0)
@@ -11,7 +10,7 @@ $gutter: 4px
   top: 0
   bottom: 0
   width: $sidebar-width
-  padding: $navbar-height 0
+  padding: ($navbar-height) 0 $navbar-height
   border-left: 1px solid black
 
   .fullscreen &

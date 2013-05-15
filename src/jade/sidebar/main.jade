@@ -1,9 +1,12 @@
 section#sidebar
   header#sidebar-header.navbar.navbar-static-top.navbar-inverse
-    .navbar-inner
-      .pull-right
-        a.brand Company Brand
-      .btn.btn-primary Join In
+    .navbar-inner.container-fluid
+      .row-fluid
+        .span6
+          .btn.btn-block.btn-primary Login
+        .span6
+          .btn.btn-block Join
+
 
   section#sidebar-body.tab-content
     include chat
@@ -16,9 +19,12 @@ section#sidebar
         li.active: a(href="#chat", data-toggle="tab")
           i.icon-comments
         li: a(href="#users", data-toggle="tab")
-          i.icon-group
+          i.icon-heart
+        li: a(href="#models", data-toggle="tab")
+          i.icon-list
         li: a(href="#models", data-toggle="tab")
           i.icon-th-large
+
 
   #toggle.btn.btn-mini
     i.icon-chevron-down

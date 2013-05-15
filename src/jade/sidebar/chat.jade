@@ -1,12 +1,14 @@
 section#chat.tab-pane.active
 
   header
-    form.navbar-search
+    form
       .controls
-        input.search-query.input-block-level
+        input.input-block-level(placeholder="Your Message")
         button.btn.btn-mini.btn-inverse
           #chat-submit.icon-share-alt
 
   #chat-body
     .well
-      ul#chat-output.unstyled
+      #toggle-info.btn Toggle Info
+      #toggle-gold.btn Toggle Gold
+      //- ul#chat-output.unstyled

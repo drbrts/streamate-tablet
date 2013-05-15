@@ -3,12 +3,18 @@
   @include transition-duration(.4s)
   @include apply-origin(top left, true)
   position: absolute
+  top: 0
+  left: 0
   z-index: 10
+  height: auto
   width: $content-width
-  @inclue translateZ(0)
+  opacity: 0.8
 
   .fullscreen &
     width: 100%
 
   .info-hidden &
     @include translateY(-100%)
+
+  .brand
+    padding-left: 0

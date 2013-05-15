@@ -3,14 +3,21 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-$sidebar-width: 30.769230769%
-$content-width: 69.230769231%
+$third: 30.769230769
+$two-third: 100 - $third + .01
 
-$content-scale: .69230769231
+$sidebar-width: $third * 1%
+$content-width: $two-third * 1%
+$content-scale: $two-third / 100
+
+$default-transition-duration: .4s
+$video-height: 576px
 
 @import compass
 @import variables
 @import bootstrap
+
+
 
 @mixin transform-transition
   @include transition-property(transform)
@@ -23,6 +30,7 @@ body, html
   padding: 0
   overflow: hidden
   background: black
+  @include user-select(none)
 
 section
   @include box-sizing(border-box)
@@ -43,24 +51,11 @@ section
   width: 100%
   height: 100%
   margin-top: 0
-  background: blue
 
   // .sidebar-closed &
   //   margin-top: 41px
   //   padding-bottom: 41px
 
-
-#video
-  @include transform-transition
-  @include apply-origin(top left, true)
-  @include scale(.69230769231)
-  width: 100%
-  height: 100%
-  position: absolute
-  top: 0
-  left: 0
-
-  .fullscreen &
-    @include scale(1)
-
+@import "video"
 @import "info"
+@import "gold"

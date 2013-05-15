@@ -1,0 +1,18 @@
+#gold
+  @include transform-transition
+  position: absolute
+  bottom: 0
+  left: 0
+  width: $content-width
+  background: gold
+  height: ( 644px - ( 576px * $content-scale ) ) / 2
+  overflow: hidden
+  padding: 0
+  margin: 0
+  @include translate(-100%, 0)
+
+  .gold-shown &
+    @include translate(0, 100%)
+
+  .fullscreen &
+    @include translate(-100%, 100%)

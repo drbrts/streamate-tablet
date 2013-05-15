@@ -5,31 +5,43 @@
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
 <section id="wrapper">
-  <video id="video" src="http://ia700408.us.archive.org/26/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4" autoplay muted loop></video>
   <section id="info" class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-inner">
-      <div class="container-fluid"><a href="#" class="brand">Big Buck Hunny</a>
-        <div class="pull-right">
-          <ul class="nav">
-            <li><a><i class="icon-remove-sign"></i></a></li>
-          </ul>
-        </div>
+    <div class="navbar-inner"><a href="#" class="brand">Company Brand</a></div>
+    <div class="navbar-inner"><a href="#" class="brand">Big Buck Hunny &nbsp;<i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></a>
+      <ul class="nav">
+        <li class="divider-vertical"></li>
+        <li><a><i class="icon-heart"></i></a></li>
+        <li><a><i class="icon-envelope"></i></a></li>
+      </ul>
+      <div class="pull-right">
+        <ul class="nav">
+          <li><a><i class="icon-remove-sign"></i></a></li>
+        </ul>
       </div>
     </div>
   </section>
+  <div id="spacer">
+    <div id="gold"><strong>WHAT I DO</strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus fringilla sollicitudin ipsum, sollicitudin convallis tellus mollis metus.</small></div>
+  </div><img id="video" src="http://lorempixel.com/1024/576">
   <section id="sidebar">
     <header id="sidebar-header" class="navbar navbar-static-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="pull-right"><a class="brand">Company Brand</a></div>
-        <div class="btn btn-primary">Join In</div>
+      <div class="navbar-inner container-fluid">
+        <div class="row-fluid">
+          <div class="span6">
+            <div class="btn btn-block btn-primary">Login</div>
+          </div>
+          <div class="span6">
+            <div class="btn btn-block">Join</div>
+          </div>
+        </div>
       </div>
     </header>
     <section id="sidebar-body" class="tab-content">
       <section id="chat" class="tab-pane active">
         <header>
-          <form class="navbar-search">
+          <form>
             <div class="controls">
-              <input class="search-query input-block-level">
+              <input placeholder="Your Message" class="input-block-level">
               <button class="btn btn-mini btn-inverse">
                 <div id="chat-submit" class="icon-share-alt"></div>
               </button>
@@ -38,7 +50,8 @@
         </header>
         <div id="chat-body">
           <div class="well">
-            <ul id="chat-output" class="unstyled"></ul>
+            <div id="toggle-info" class="btn">Toggle Info</div>
+            <div id="toggle-gold" class="btn">Toggle Gold</div>
           </div>
         </div>
       </section>
@@ -92,7 +105,8 @@
       <div class="navbar-inner">
         <ul class="nav">
           <li class="active"><a href="#chat" data-toggle="tab"><i class="icon-comments"></i></a></li>
-          <li><a href="#users" data-toggle="tab"><i class="icon-group"></i></a></li>
+          <li><a href="#users" data-toggle="tab"><i class="icon-heart"></i></a></li>
+          <li><a href="#models" data-toggle="tab"><i class="icon-list"></i></a></li>
           <li><a href="#models" data-toggle="tab"><i class="icon-th-large"></i></a></li>
         </ul>
       </div>
@@ -100,9 +114,8 @@
     <div id="toggle" class="btn btn-mini"><i class="icon-chevron-down"></i></div>
   </section>
 </section>
-<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+<script src="//code.jquery.com/jquery-2.0.0.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/jquery.hammer.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="/js/app.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

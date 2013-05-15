@@ -1,0 +1,31 @@
+#video
+  @include apply-origin(top left, true)
+  @include transition-property(height transform)
+  @include transition-duration(.4s)
+
+  @include scale($content-scale)
+  @include box-sizing(border-box)
+  width: 100%
+  height: $video-height
+  position: absolute
+  top: 82px
+  left: 0
+  margin: 0
+
+  .fullscreen &
+    @include transform(scale(1) translateY((644px - $video-height)/2))
+
+#spacer
+  @include apply-origin(top left, true)
+  @include transition-property(all)
+  @include transition-duration(.4s)
+  @include translateY(-($video-height - ($video-height* $content-scale)))
+  width: 100%
+  position: relative
+  top: 82px
+  left: 0
+  height: $video-height
+  z-index: 0
+
+  .fullscreen &
+    @include translateY((644px - $video-height))

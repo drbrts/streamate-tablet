@@ -1,4 +1,6 @@
 $ ->
+  hammertime = $(document).hammer();
+
   $toggle = $('#toggle')
   $sidebar = $('#sidebar')
   $video = $('#video')
@@ -7,62 +9,119 @@ $ ->
   toggleFullScreen = () ->
     $html.toggleClass('fullscreen')
 
-  toggleInfoBar = () ->
+  toggleInfo = () ->
     $html.toggleClass('info-hidden')
 
-  Hammer($toggle[0]).on 'tap', toggleFullScreen
-  Hammer($sidebar[0]).on 'swiperight', toggleFullScreen
-  Hammer($video[0]).on 'tap', toggleInfoBar
+  toggleGold = () ->
+    $html.toggleClass('gold-shown')
+
+  $video.on 'tap', toggleFullScreen
+  $('#toggle').on 'tap', toggleFullScreen
+  $('#toggle-info').on 'tap', toggleInfo
+  $('#toggle-gold').on 'tap', toggleGold
+
   return
 
-  # aspect =
-  #   width: 16
-  #   height: 9
+###
+  aspect =
+    width: 16
+    height: 9
 
-  # tap = 'click touchend'
+  tap = 'click touchend'
 
-  # init = () ->
-  #   setBodySize()
-  #   setVideoSize()
+  init = () ->
+    setBodySize()
+    setVideoSize()
 
-  # getRatio = () -> aspect.width / aspect.height
-  # getHeight = (w) -> w / getRatio()
-  # getWidth = (h) -> h * getRatio()
-  # tooTall = (h) -> ( h <= window.innerHeight )?
-  # sidebarClosed = () -> ( $('body').hasClass('sidebar-closed') is true )
+  getRatio = () -> aspect.width / aspect.height
+  getHeight = (w) -> w / getRatio()
+  getWidth = (h) -> h * getRatio()
+  tooTall = (h) -> ( h <= window.innerHeight )?
+  sidebarClosed = () -> ( $('body').hasClass('sidebar-closed') is true )
 
-  # setVideoSize = () ->
-  #   video = $('video')
-  #   height = getHeight video.width()
-  #   height = window.innerHeight if sidebarClosed()
+  setVideoSize = () ->
+    video = $('video')
+    height = getHeight video.width()
+    height = window.innerHeight if sidebarClosed()
 
-  #   setTimeout ->
-  #     video.height height
-  #   , 1
+    setTimeout ->
+      video.height height
+    , 1
 
-  # toggleSidebar = (e) ->
-  #   e?.preventDefault()
-  #   $body = $('body').toggleClass 'sidebar-closed'
+  toggleSidebar = (e) ->
+    e?.preventDefault()
+    $body = $('body').toggleClass 'sidebar-closed'
 
-  # setBodySize = () ->
-  #   $('body').height(window.innerHeight).width(window.innerWidth)
+  setBodySize = () ->
+    $('body').height(window.innerHeight).width(window.innerWidth)
 
 
-  # $toggle = $('#toggle-sidebar')
-  #   .on tap, (e) ->
-  #     e.preventDefault()
-  #     toggleSidebar()
-  #     setVideoSize()
+  $toggle = $('#toggle-sidebar')
+    .on tap, (e) ->
+      e.preventDefault()
+      toggleSidebar()
+      setVideoSize()
 
-  # $(document).on 'touchstart', false
+  $(document).on 'touchstart', false
 
-  # $video = $('#video')
-  #   .on tap, (e) ->
-  #     e.preventDefault()
-  #     @play() if @paused or @ended
-  #     toggleSidebar() unless sidebarOpened()
-  #     setVideoSize()
+  $video = $('#video')
+    .on tap, (e) ->
+      e.preventDefault()
+      @play() if @paused or @ended
+      toggleSidebar() unless sidebarOpened()
+      setVideoSize()
 
-  # # init()
+  # init()
 
-  # return
+  return
+
+  video:
+    landscape:
+      width: 100%
+      height: 100%
+
+      sidebar-in:
+        width: 100% * scale-width
+        height: width * ratio
+
+
+    portrait:
+      width: 100%
+      height: 100%
+
+
+  gold-info / room-topic:
+    landscape:
+      width: 100%
+      height:
+        16x9: ( windowHeight - videoHeight ) / 2
+        3x4: windowHeight - videoHeight
+
+    landscape:
+      width: 100%
+      height: auto
+
+  model-info
+    landscape:
+      width: 100%
+      height:
+        16x9: ( windowHeight - videoHeight ) / 2
+        3x4: 0
+
+    portrait: none
+
+
+###
+
+
+
+
+
+
+
+
+
+
+
+
+
