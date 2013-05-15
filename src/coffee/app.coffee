@@ -1,19 +1,19 @@
 $ ->
 
+  $video = $('#video')
+  $html = $('html')
+
   toggleModelInfo = () ->
     $html.toggleClass 'modelinfo-hidden'
 
   videoIsHD = () ->
-    ($video.src is '/poster_wide.jpg')?
+    ($video.attr('src') is '/poster_wide.jpg')
 
   toggleHD = () ->
-    $html.toggleClass 'hd-video'
+    $html.toggleClass 'hd-video', videoIsHD()
 
   init = () ->
-    toggleHD() if videoIsHD()
-
-  $video = $('#video')
-  $html = $('html')
+    toggleHD()
 
   $video.hammer().on 'tap', toggleModelInfo
 

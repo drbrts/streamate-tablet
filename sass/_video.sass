@@ -1,17 +1,39 @@
+#video-wrapper
+  @extend .box
+  padding-top: 41px
+  background-color: black
+
+  @include landscape
+    padding-top: 0
+
+  @include portrait
+    padding-top: 0
+
 #video
-  position: relative
+  position: absolute
   max-width: 100%
   max-height: 100%
   z-index: 0
 
   @include landscape
-    top: 41px
-
-  @include landscape-small
-    position: absolute
     top: 50%
     left: 50%
     @include translate(-50%, -50%)
+
+  .hd-video &
+    @include landscape
+      left: 0
+      top: 0
+      @include translate(0,0)
+
+    @include landscape-small
+      top: 50%
+      left: 50%
+      @include translate(-50%, -50%)
+
+
+  .goldinfo-shown &
+
 
 #post-video
   position: relative

@@ -6,11 +6,13 @@
   left: 0
   width: 100%
   z-index: 10
+  @include opacity(50)
 
   i + i
     margin-left: .25em
 
   .rating-stars
+    display: inline-block
     margin-left: 1em
 
     i
@@ -21,8 +23,7 @@
       -webkit-text-fill-color: transparent
 
   .modelinfo-hidden &
-    @include landscape-small
-      @include translateY(-100%)
+    @include translateY(-100%)
 
   .icon-heart, .icon-remove-sign
     @extend .btn-danger
@@ -30,7 +31,7 @@
     -webkit-text-fill-color: transparent
 
   .icon-envelope
-    @extend .btn-primary
+    @extend .btn-warning
     @include background-clip(text)
     -webkit-text-fill-color: transparent
 

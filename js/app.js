@@ -3,22 +3,20 @@
   $(function() {
     var $html, $video, init, toggleHD, toggleModelInfo, videoIsHD;
 
+    $video = $('#video');
+    $html = $('html');
     toggleModelInfo = function() {
       return $html.toggleClass('modelinfo-hidden');
     };
     videoIsHD = function() {
-      return ($video.src === '/poster_wide.jpg') != null;
+      return $video.attr('src') === '/poster_wide.jpg';
     };
     toggleHD = function() {
-      return $html.toggleClass('hd-video');
+      return $html.toggleClass('hd-video', videoIsHD());
     };
     init = function() {
-      if (videoIsHD()) {
-        return toggleHD();
-      }
+      return toggleHD();
     };
-    $video = $('#video');
-    $html = $('html');
     $video.hammer().on('tap', toggleModelInfo);
     return init();
   });

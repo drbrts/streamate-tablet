@@ -2950,8 +2950,9 @@ input[type="button"].btn-block {
 }
 
 /* line 139, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_buttons.scss */
-.btn-primary.active, #modelinfo .active.icon-envelope,
+.btn-primary.active,
 .btn-warning.active,
+#modelinfo .active.icon-envelope,
 .btn-danger.active,
 #modelinfo .active.icon-heart,
 #modelinfo .active.icon-remove-sign,
@@ -2962,7 +2963,7 @@ input[type="button"].btn-block {
 }
 
 /* line 145, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_buttons.scss */
-.btn-primary, #modelinfo .icon-envelope {
+.btn-primary {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #006ccc;
@@ -2980,18 +2981,18 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 /* line 513, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-primary:hover, #modelinfo .icon-envelope:hover, .btn-primary:focus, #modelinfo .icon-envelope:focus, .btn-primary:active, #modelinfo .icon-envelope:active, .btn-primary.active, #modelinfo .active.icon-envelope, .btn-primary.disabled, #modelinfo .disabled.icon-envelope, .btn-primary[disabled], #modelinfo [disabled].icon-envelope {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
   color: white;
   background-color: #0044cc;
   *background-color: #003bb3;
 }
 /* line 521, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-primary:active, #modelinfo .icon-envelope:active, .btn-primary.active, #modelinfo .active.icon-envelope {
+.btn-primary:active, .btn-primary.active {
   background-color: #003399 \9;
 }
 
 /* line 149, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_buttons.scss */
-.btn-warning {
+.btn-warning, #modelinfo .icon-envelope {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #f9a732;
@@ -3009,13 +3010,13 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 /* line 513, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-warning:hover, .btn-warning:focus, .btn-warning:active, .btn-warning.active, .btn-warning.disabled, .btn-warning[disabled] {
+.btn-warning:hover, #modelinfo .icon-envelope:hover, .btn-warning:focus, #modelinfo .icon-envelope:focus, .btn-warning:active, #modelinfo .icon-envelope:active, .btn-warning.active, #modelinfo .active.icon-envelope, .btn-warning.disabled, #modelinfo .disabled.icon-envelope, .btn-warning[disabled], #modelinfo [disabled].icon-envelope {
   color: white;
   background-color: #f89406;
   *background-color: #df8505;
 }
 /* line 521, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-warning:active, .btn-warning.active {
+.btn-warning:active, #modelinfo .icon-envelope:active, .btn-warning.active, #modelinfo .active.icon-envelope {
   background-color: #c67605 \9;
 }
 
@@ -3375,11 +3376,11 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 /* line 140, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
-.btn-group.open .btn-primary.dropdown-toggle, .btn-group.open #modelinfo .dropdown-toggle.icon-envelope, #modelinfo .btn-group.open .dropdown-toggle.icon-envelope {
+.btn-group.open .btn-primary.dropdown-toggle {
   background-color: #0044cc;
 }
 /* line 143, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
-.btn-group.open .btn-warning.dropdown-toggle {
+.btn-group.open .btn-warning.dropdown-toggle, .btn-group.open #modelinfo .dropdown-toggle.icon-envelope, #modelinfo .btn-group.open .dropdown-toggle.icon-envelope {
   background-color: #f89406;
 }
 /* line 146, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
@@ -3429,8 +3430,9 @@ input[type="submit"].btn.btn-mini {
 }
 
 /* line 193, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
-.btn-primary .caret, #modelinfo .icon-envelope .caret,
+.btn-primary .caret,
 .btn-warning .caret,
+#modelinfo .icon-envelope .caret,
 .btn-danger .caret,
 #modelinfo .icon-heart .caret,
 #modelinfo .icon-remove-sign .caret,
@@ -6065,7 +6067,7 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 }
 
 /* line 23, ../sass/_mixins.sass */
-.box, body, html, #wrapper {
+.box, body, html, #wrapper, #video-wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -6106,7 +6108,7 @@ body {
 @media screen and (min-width: 769px) {
   /* line 19, ../sass/screen.sass */
   body {
-    padding-right: 31.25%;
+    padding-right: 270px;
   }
 }
 
@@ -6121,6 +6123,16 @@ body {
   height: 51px;
 }
 /* line 10, ../sass/_header.sass */
+#header .brand {
+  max-width: 200px;
+  overflow: hidden;
+  -ms-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  display: inline-block;
+  padding-right: 10px;
+}
+/* line 19, ../sass/_header.sass */
 #header .container-fluid {
   padding: 0 10px;
   height: 51px;
@@ -6128,11 +6140,11 @@ body {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 15, ../sass/_header.sass */
+/* line 24, ../sass/_header.sass */
 #header .btn + .btn {
   margin-left: 10px;
 }
-/* line 18, ../sass/_header.sass */
+/* line 27, ../sass/_header.sass */
 #header .btn-join {
   border-color: #de9200;
   color: black;
@@ -6147,22 +6159,57 @@ body {
 }
 
 /* line 1, ../sass/_video.sass */
+#video-wrapper {
+  padding-top: 41px;
+  background-color: black;
+}
+@media screen and (min-width: 769px) {
+  /* line 1, ../sass/_video.sass */
+  #video-wrapper {
+    padding-top: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* line 1, ../sass/_video.sass */
+  #video-wrapper {
+    padding-top: 0;
+  }
+}
+
+/* line 12, ../sass/_video.sass */
 #video {
-  position: relative;
+  position: absolute;
   max-width: 100%;
   max-height: 100%;
   z-index: 0;
 }
 @media screen and (min-width: 769px) {
-  /* line 1, ../sass/_video.sass */
+  /* line 12, ../sass/_video.sass */
   #video {
-    top: 41px;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
-@media screen and (min-width: 769px) and (max-height: 442px) {
-  /* line 1, ../sass/_video.sass */
-  #video {
-    position: absolute;
+@media screen and (min-width: 769px) {
+  /* line 23, ../sass/_video.sass */
+  .hd-video #video {
+    left: 0;
+    top: 0;
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+@media screen and (min-width: 769px) and (max-height: 441px) {
+  /* line 23, ../sass/_video.sass */
+  .hd-video #video {
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
@@ -6173,7 +6220,7 @@ body {
   }
 }
 
-/* line 16, ../sass/_video.sass */
+/* line 38, ../sass/_video.sass */
 #post-video {
   position: relative;
   top: 41px;
@@ -6195,16 +6242,19 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
 }
-/* line 10, ../sass/_modelinfo.sass */
+/* line 11, ../sass/_modelinfo.sass */
 #modelinfo i + i {
   margin-left: 0.25em;
 }
-/* line 13, ../sass/_modelinfo.sass */
+/* line 14, ../sass/_modelinfo.sass */
 #modelinfo .rating-stars {
+  display: inline-block;
   margin-left: 1em;
 }
-/* line 16, ../sass/_modelinfo.sass */
+/* line 18, ../sass/_modelinfo.sass */
 #modelinfo .rating-stars i {
   background-color: #fdee00;
   *zoom: 1;
@@ -6219,56 +6269,53 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-@media screen and (min-width: 769px) and (max-height: 442px) {
-  /* line 23, ../sass/_modelinfo.sass */
-  .modelinfo-hidden #modelinfo {
-    -webkit-transform: translateY(-100%);
-    -moz-transform: translateY(-100%);
-    -ms-transform: translateY(-100%);
-    -o-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
+/* line 25, ../sass/_modelinfo.sass */
+.modelinfo-hidden #modelinfo {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+  transform: translateY(-100%);
 }
-/* line 27, ../sass/_modelinfo.sass */
+/* line 28, ../sass/_modelinfo.sass */
 #modelinfo .icon-heart, #modelinfo .icon-remove-sign {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 32, ../sass/_modelinfo.sass */
+/* line 33, ../sass/_modelinfo.sass */
 #modelinfo .icon-envelope {
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-/* line 38, ../sass/_modelinfo.sass */
+/* line 39, ../sass/_modelinfo.sass */
 #modelinfo .pull-right .brand {
   padding-right: 0;
 }
 
 /* line 1, ../sass/_bio.sass */
 #bio {
-  position: relative;
+  @extene .box;
   background-color: #cccccc;
-  padding-bottom: 50px;
   display: none;
 }
 @media screen and (min-width: 769px) {
   /* line 1, ../sass/_bio.sass */
   #bio {
-    top: 41px;
+    bottom: 0;
   }
 }
 @media screen and (min-width: 769px) {
-  /* line 10, ../sass/_bio.sass */
+  /* line 9, ../sass/_bio.sass */
   .hd-video #bio {
     display: block;
   }
 }
-@media screen and (min-width: 769px) and (max-height: 442px) {
-  /* line 10, ../sass/_bio.sass */
+@media screen and (min-width: 769px) and (max-height: 441px) {
+  /* line 9, ../sass/_bio.sass */
   .hd-video #bio {
     display: none;
   }
