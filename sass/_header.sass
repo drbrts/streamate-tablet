@@ -14,3 +14,10 @@
 
   .btn + .btn
     margin-left: 10px
+
+  .btn-join
+    border-color: #de9200
+    color: #000000
+    background: #fdee00
+    @include filter-gradient(#fdee00, #de9200, vertical)
+    @include background-image(linear-gradient(top, #fdee00 0%,#de9200 100%))

@@ -6132,6 +6132,19 @@ body {
 #header .btn + .btn {
   margin-left: 10px;
 }
+/* line 18, ../sass/_header.sass */
+#header .btn-join {
+  border-color: #de9200;
+  color: black;
+  background: #fdee00;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFDEE00', endColorstr='#FFDE9200');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdee00), color-stop(100%, #de9200));
+  background-image: -webkit-linear-gradient(top, #fdee00 0%, #de9200 100%);
+  background-image: -moz-linear-gradient(top, #fdee00 0%, #de9200 100%);
+  background-image: -o-linear-gradient(top, #fdee00 0%, #de9200 100%);
+  background-image: linear-gradient(top, #fdee00 0%, #de9200 100%);
+}
 
 /* line 1, ../sass/_video.sass */
 #video {
