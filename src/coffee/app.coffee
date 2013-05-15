@@ -1,19 +1,39 @@
 $ ->
-  $toggle = $('#toggle')
-  $sidebar = $('#sidebar')
+
+  toggleModelInfo = () ->
+    $html.toggleClass 'modelinfo-hidden'
+
+  videoIsHD = () ->
+    ($video.src is '/poster_wide.jpg')?
+
+  toggleHD = () ->
+    $html.toggleClass 'hd-video'
+
+  init = () ->
+    toggleHD() if videoIsHD()
+
   $video = $('#video')
   $html = $('html')
 
-  toggleFullScreen = () ->
-    $html.toggleClass('fullscreen')
+  $video.hammer().on 'tap', toggleModelInfo
 
-  toggleInfoBar = () ->
-    $html.toggleClass('info-hidden')
+  init()
 
-  Hammer($toggle[0]).on 'tap', toggleFullScreen
-  Hammer($sidebar[0]).on 'swiperight', toggleFullScreen
-  Hammer($video[0]).on 'tap', toggleInfoBar
-  return
+  # $toggle = $('#toggle')
+  # $sidebar = $('#sidebar')
+  # $video = $('#video')
+  # $html = $('html')
+
+  # toggleFullScreen = () ->
+  #   $html.toggleClass('fullscreen')
+
+  # toggleInfoBar = () ->
+  #   $html.toggleClass('info-hidden')
+
+  # Hammer($toggle[0]).on 'tap', toggleFullScreen
+  # Hammer($sidebar[0]).on 'swiperight', toggleFullScreen
+  # Hammer($video[0]).on 'tap', toggleInfoBar
+  # return
 
   # aspect =
   #   width: 16

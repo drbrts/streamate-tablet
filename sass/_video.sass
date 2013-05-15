@@ -1,0 +1,21 @@
+#video
+  position: relative
+  max-width: 100%
+  max-height: 100%
+  z-index: 0
+
+  @include landscape
+    top: 41px
+
+  @include landscape-small
+    position: absolute
+    top: 50%
+    left: 50%
+    @include translate(-50%, -50%)
+
+#post-video
+  position: relative
+  top: 41px
+
+@import modelinfo
+@import bio

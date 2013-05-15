@@ -4,105 +4,63 @@
 <title>Jade, Sass, and Coffeescript; Oh my!</title>
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" rel="stylesheet">
 <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
-<section id="wrapper">
-  <video id="video" src="http://ia700408.us.archive.org/26/items/BigBuckBunny_328/BigBuckBunny_512kb.mp4" autoplay muted loop></video>
-  <section id="info" class="navbar navbar-inverse navbar-static-top">
-    <div class="navbar-inner">
-      <div class="container-fluid"><a href="#" class="brand">Big Buck Hunny</a>
-        <div class="pull-right">
-          <ul class="nav">
-            <li><a><i class="icon-remove-sign"></i></a></li>
-          </ul>
-        </div>
-      </div>
+<header id="header" class="navbar navbar-static-top navbar-inverse">
+  <div class="navbar-inner container-fluid">
+    <div class="pull-right"><a class="btn btn-warning">Join Free</a><a class="btn btn">Member Login</a></div><a class="brand">Streamate</a>
+    <ul class="nav">
+      <li><a>New Models</a></li>
+    </ul>
+    <form class="navbar-search hide-portrait">
+      <input type="text" placeholder="Search Anything" class="search-query">
+    </form>
+  </div>
+</header>
+<div id="wrapper"><img id="video" src="/poster_wide.jpg">
+  <section id="modelinfo" class="navbar navbar-inverse navbar-static-top">
+    <div class="navbar-inner container-fluid"><a class="brand">Big Buck Hunny
+        <big class="rating-stars"><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i><i class="icon-star"></i></big></a>
+      <ul class="nav">
+        <li class="divider-vertical"></li>
+        <li><a>
+            <big><i class="icon-heart"></i></big></a></li>
+        <li class="divider-vertical"></li>
+        <li><a>
+            <big><i class="icon-envelope"></i></big></a></li>
+        <li class="divider-vertical"></li>
+      </ul>
+      <div class="pull-right"><a class="brand">
+          <big><i class="icon-remove-sign"></i></big></a></div>
     </div>
   </section>
-  <section id="sidebar">
-    <header id="sidebar-header" class="navbar navbar-static-top navbar-inverse">
-      <div class="navbar-inner">
-        <div class="pull-right"><a class="brand">Company Brand</a></div>
-        <div class="btn btn-primary">Join In</div>
+  <div id="post-video"></div>
+  <div id="bio" class="container-fluid">
+    <h3 style="margin-bottom:0">About Big Buck Hunny</h3>
+    <div class="row-fluid">
+      <div class="span6">
+        <dl class="dl-horizontal">
+          <dt>Age</dt>
+          <dd>4</dd>
+          <dt>Gender</dt>
+          <dd>Male</dd>
+          <dt>Sexual Preference</dt>
+          <dd>Straight</dd>
+        </dl>
       </div>
-    </header>
-    <section id="sidebar-body" class="tab-content">
-      <section id="chat" class="tab-pane active">
-        <header>
-          <form class="navbar-search">
-            <div class="controls">
-              <input class="search-query input-block-level">
-              <button class="btn btn-mini btn-inverse">
-                <div id="chat-submit" class="icon-share-alt"></div>
-              </button>
-            </div>
-          </form>
-        </header>
-        <div id="chat-body">
-          <div class="well">
-            <ul id="chat-output" class="unstyled"></ul>
-          </div>
-        </div>
-      </section>
-      <section id="users" class="tab-pane">
-        <section class="well well-small">
-          <h3>Users</h3>
-          <hr>
-          <ul class="unstyled">
-            <li><a>Me</a></li>
-          </ul>
-        </section>
-      </section>
-      <section id="models" class="tab-panel">
-        <div class="container-fluid">
-          <div class="row-fluid">
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-            <div class="span6">
-              <div class="well well-small"><strong>Thumb</strong><img src="http://lorempixel.com/160/120/abstract"></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </section>
-    <footer id="sidebar-footer" class="navbar navbar-static-top navbar-inverse">
-      <div class="navbar-inner">
-        <ul class="nav">
-          <li class="active"><a href="#chat" data-toggle="tab"><i class="icon-comments"></i></a></li>
-          <li><a href="#users" data-toggle="tab"><i class="icon-group"></i></a></li>
-          <li><a href="#models" data-toggle="tab"><i class="icon-th-large"></i></a></li>
-        </ul>
+      <div class="span6">
+        <dl class="dl-horizontal">
+          <dt>Height</dt>
+          <dd>5'2"</dd>
+          <dt>Weight</dt>
+          <dd>7.5 stone</dd>
+          <dt>Measurements</dt>
+          <dd>32-25-35"</dd>
+        </dl>
       </div>
-    </footer>
-    <div id="toggle" class="btn btn-mini"><i class="icon-chevron-down"></i></div>
-  </section>
-</section>
-<script src="//code.jquery.com/jquery-1.9.1.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/hammer.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0-rc.3/handlebars.min.js"></script>
+    </div>
+  </div>
+</div>
+<script src="//code.jquery.com/jquery-2.0.0.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.5/jquery.hammer.js"></script>
 <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
 <script src="/js/app.js"></script>
 <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>

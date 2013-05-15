@@ -1,7 +1,11 @@
-/* Welcome to Compass.
- * In this file you should write your main styles. (or centralize your imports)
- * Import this file using the following HTML or equivalent:
- * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../sass/_variables.sass */
+* {
+  -webkit-transition-duration: 0.4s;
+  -moz-transition-duration: 0.4s;
+  -o-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+}
+
 /* Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
@@ -2946,9 +2950,11 @@ input[type="button"].btn-block {
 }
 
 /* line 139, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_buttons.scss */
-.btn-primary.active,
+.btn-primary.active, #modelinfo .active.icon-envelope,
 .btn-warning.active,
 .btn-danger.active,
+#modelinfo .active.icon-heart,
+#modelinfo .active.icon-remove-sign,
 .btn-success.active,
 .btn-info.active,
 .btn-inverse.active {
@@ -2956,7 +2962,7 @@ input[type="button"].btn-block {
 }
 
 /* line 145, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_buttons.scss */
-.btn-primary {
+.btn-primary, #modelinfo .icon-envelope {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #006ccc;
@@ -2974,13 +2980,13 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 /* line 513, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .btn-primary.disabled, .btn-primary[disabled] {
+.btn-primary:hover, #modelinfo .icon-envelope:hover, .btn-primary:focus, #modelinfo .icon-envelope:focus, .btn-primary:active, #modelinfo .icon-envelope:active, .btn-primary.active, #modelinfo .active.icon-envelope, .btn-primary.disabled, #modelinfo .disabled.icon-envelope, .btn-primary[disabled], #modelinfo [disabled].icon-envelope {
   color: white;
   background-color: #0044cc;
   *background-color: #003bb3;
 }
 /* line 521, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-primary:active, .btn-primary.active {
+.btn-primary:active, #modelinfo .icon-envelope:active, .btn-primary.active, #modelinfo .active.icon-envelope {
   background-color: #003399 \9;
 }
 
@@ -3014,7 +3020,7 @@ input[type="button"].btn-block {
 }
 
 /* line 153, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_buttons.scss */
-.btn-danger {
+.btn-danger, #modelinfo .icon-heart, #modelinfo .icon-remove-sign {
   color: white;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
   background-color: #da4e49;
@@ -3032,13 +3038,13 @@ input[type="button"].btn-block {
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 /* line 513, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-danger:hover, .btn-danger:focus, .btn-danger:active, .btn-danger.active, .btn-danger.disabled, .btn-danger[disabled] {
+.btn-danger:hover, #modelinfo .icon-heart:hover, #modelinfo .icon-remove-sign:hover, .btn-danger:focus, #modelinfo .icon-heart:focus, #modelinfo .icon-remove-sign:focus, .btn-danger:active, #modelinfo .icon-heart:active, #modelinfo .icon-remove-sign:active, .btn-danger.active, #modelinfo .active.icon-heart, #modelinfo .active.icon-remove-sign, .btn-danger.disabled, #modelinfo .disabled.icon-heart, #modelinfo .disabled.icon-remove-sign, .btn-danger[disabled], #modelinfo [disabled].icon-heart, #modelinfo [disabled].icon-remove-sign {
   color: white;
   background-color: #bd362f;
   *background-color: #a9302a;
 }
 /* line 521, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_mixins.scss */
-.btn-danger:active, .btn-danger.active {
+.btn-danger:active, #modelinfo .icon-heart:active, #modelinfo .icon-remove-sign:active, .btn-danger.active, #modelinfo .active.icon-heart, #modelinfo .active.icon-remove-sign {
   background-color: #942a25 \9;
 }
 
@@ -3369,7 +3375,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 /* line 140, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
-.btn-group.open .btn-primary.dropdown-toggle {
+.btn-group.open .btn-primary.dropdown-toggle, .btn-group.open #modelinfo .dropdown-toggle.icon-envelope, #modelinfo .btn-group.open .dropdown-toggle.icon-envelope {
   background-color: #0044cc;
 }
 /* line 143, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
@@ -3377,7 +3383,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #f89406;
 }
 /* line 146, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
-.btn-group.open .btn-danger.dropdown-toggle {
+.btn-group.open .btn-danger.dropdown-toggle, .btn-group.open #modelinfo .dropdown-toggle.icon-heart, #modelinfo .btn-group.open .dropdown-toggle.icon-heart, .btn-group.open #modelinfo .dropdown-toggle.icon-remove-sign, #modelinfo .btn-group.open .dropdown-toggle.icon-remove-sign {
   background-color: #bd362f;
 }
 /* line 149, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
@@ -3423,9 +3429,11 @@ input[type="submit"].btn.btn-mini {
 }
 
 /* line 193, ../../../../sorahn/Github/sass-twitter-bootstrap/lib/_button-groups.scss */
-.btn-primary .caret,
+.btn-primary .caret, #modelinfo .icon-envelope .caret,
 .btn-warning .caret,
 .btn-danger .caret,
+#modelinfo .icon-heart .caret,
+#modelinfo .icon-remove-sign .caret,
 .btn-info .caret,
 .btn-success .caret,
 .btn-inverse .caret {
@@ -6056,18 +6064,8 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
   box-sizing: border-box;
 }
 
-/* line 19, ../sass/screen.sass */
-body, html {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background: black;
-}
-
-/* line 27, ../sass/screen.sass */
-section {
+/* line 23, ../sass/_mixins.sass */
+.box, body, html, #wrapper {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -6076,358 +6074,189 @@ section {
   height: 100%;
   margin: 0;
   padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  /* line 7, ../sass/screen.sass */
+  .hide-portrait {
+    display: none !important;
+  }
+}
+@media screen and (min-width: 769px) {
+  /* line 11, ../sass/screen.sass */
+  .hide-landscape {
+    display: none !important;
+  }
+}
+/* line 14, ../sass/screen.sass */
+body, html, #wrapper {
+  background: #aaaaaa;
+  overflow: hidden;
+}
+
+/* line 19, ../sass/screen.sass */
+body {
+  -webkit-transition: padding 0.4s;
+  -moz-transition: padding 0.4s;
+  -o-transition: padding 0.4s;
+  transition: padding 0.4s;
+  position: relative;
+  padding-top: 51px;
+}
+@media screen and (min-width: 769px) {
+  /* line 19, ../sass/screen.sass */
+  body {
+    padding-right: 31.25%;
+  }
 }
 
 /* line 1, ../sass/_header.sass */
 #header {
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
-}
-/* line 5, ../sass/_header.sass */
-.sidebar-closed #header {
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
-}
-
-/* line 5, ../sass/sidebar/_main.sass */
-#sidebar {
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-transform: translateX(0);
-  -moz-transform: translateX(0);
-  -ms-transform: translateX(0);
-  -o-transform: translateX(0);
-  transform: translateX(0);
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: absolute;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  width: 30.76923%;
-  padding: 41px 0;
-  border-left: 1px solid black;
-}
-/* line 17, ../sass/sidebar/_main.sass */
-.fullscreen #sidebar {
-  -webkit-transform: translateX(100%);
-  -moz-transform: translateX(100%);
-  -ms-transform: translateX(100%);
-  -o-transform: translateX(100%);
-  transform: translateX(100%);
-}
-
-/* line 20, ../sass/sidebar/_main.sass */
-#sidebar-header {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  height: auto;
-}
-
-/* line 27, ../sass/sidebar/_main.sass */
-#sidebar-body {
-  overflow: hidden;
-}
-
-/* line 30, ../sass/sidebar/_main.sass */
-#sidebar-footer {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: auto;
-}
-/* line 37, ../sass/sidebar/_main.sass */
-#sidebar-footer .navbar-inner {
+  margin: 0;
   padding: 0;
+  height: 51px;
 }
-/* line 40, ../sass/sidebar/_main.sass */
-#sidebar-footer .nav {
-  margin: 0;
-  display: table;
-  width: 100%;
-}
-/* line 45, ../sass/sidebar/_main.sass */
-#sidebar-footer .nav li {
-  display: table-cell;
-  width: 1%;
-  float: none;
-}
-/* line 50, ../sass/sidebar/_main.sass */
-#sidebar-footer .nav li a {
-  text-align: center;
-  padding: 4px 0;
-  font-weight: bold;
-  text-align: center;
-}
-/* line 56, ../sass/sidebar/_main.sass */
-#sidebar-footer i {
-  font-size: 2em;
-}
-
-/* line 59, ../sass/sidebar/_main.sass */
-#toggle {
-  width: 10em;
-  position: absolute;
-  margin-top: 5em;
-  top: 50%;
+/* line 10, ../sass/_header.sass */
+#header .container-fluid {
+  padding: 0 10px;
+  height: 51px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  -webkit-transform-origin: bottom left;
-  -moz-transform-origin: bottom left;
-  -ms-transform-origin: bottom left;
-  -o-transform-origin: bottom left;
-  transform-origin: bottom left;
-  -webkit-transform: rotate(-90deg);
-  -moz-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  -o-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  -webkit-border-bottom-right-radius: 0;
-  -moz-border-radius-bottomright: 0;
-  border-bottom-right-radius: 0;
-  -webkit-border-bottom-left-radius: 0;
-  -moz-border-radius-bottomleft: 0;
-  border-bottom-left-radius: 0;
 }
-/* line 70, ../sass/sidebar/_main.sass */
-#toggle i {
-  display: inline-block;
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-}
-/* line 74, ../sass/sidebar/_main.sass */
-.fullscreen #toggle i {
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
+/* line 15, ../sass/_header.sass */
+#header .btn + .btn {
+  margin-left: 10px;
 }
 
-/* line 1, ../sass/sidebar/_chat.sass */
-#chat {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  padding: 2.857em 4px 4px;
-  background: #9d261d;
-}
-/* line 9, ../sass/sidebar/_chat.sass */
-#chat header {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  padding: 4px;
-  height: auto;
-}
-/* line 18, ../sass/sidebar/_chat.sass */
-#chat header form {
-  margin: 0;
-  float: none;
-}
-/* line 22, ../sass/sidebar/_chat.sass */
-#chat header .controls {
-  position: relative;
-}
-/* line 25, ../sass/sidebar/_chat.sass */
-#chat header button {
-  position: absolute;
-  top: 0.45em;
-  right: 0.45em;
-  margin: 0;
-  border-radius: 48%;
-}
-
-/* line 32, ../sass/sidebar/_chat.sass */
-#chat-body {
-  height: 100%;
-  background: teal;
-}
-/* line 36, ../sass/sidebar/_chat.sass */
-#chat-body .well {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding: 0;
-  height: 100%;
-  overflow-y: scroll;
-  overflow-x: hidden;
-}
-
-/* line 44, ../sass/sidebar/_chat.sass */
-#chat-output {
-  margin: 0;
-}
-
-/* line 47, ../sass/sidebar/_chat.sass */
-#chat-submit {
-  display: inline-block;
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  -o-transform: rotate(180deg);
-  transform: rotate(180deg);
-}
-
-/* line 1, ../sass/sidebar/_users.sass */
-#users {
-  background: #f89406;
-  padding: 4px;
-}
-/* line 5, ../sass/sidebar/_users.sass */
-#users h3 {
-  margin: 0;
-}
-/* line 8, ../sass/sidebar/_users.sass */
-#users hr {
-  margin-top: 0;
-}
-
-/* line 1, ../sass/sidebar/_models.sass */
-#models {
-  background: #46a546;
-  padding: 4px 0;
-  overflow-y: scroll;
-  overflow-x: hidden;
-  -webkit-overflow-scrolling: touch;
-  overflow-scrolling: touch;
-}
-/* line 9, ../sass/sidebar/_models.sass */
-#models .container-fluid {
-  padding: 0 4px;
-}
-/* line 12, ../sass/sidebar/_models.sass */
-#models .well {
-  padding: 4px;
-  margin-bottom: 4px;
-}
-/* line 16, ../sass/sidebar/_models.sass */
-#models .span6:nth-of-type(odd) {
-  margin-left: 0;
-}
-
-/* line 39, ../sass/screen.sass */
-#wrapper {
-  -webkit-transition-property: -webkit-transform;
-  -moz-transition-property: -moz-transform;
-  -o-transition-property: -o-transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  margin-top: 0;
-  background: blue;
-}
-
-/* line 53, ../sass/screen.sass */
+/* line 1, ../sass/_video.sass */
 #video {
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 0;
+}
+@media screen and (min-width: 769px) {
+  /* line 1, ../sass/_video.sass */
+  #video {
+    top: 41px;
+  }
+}
+@media screen and (min-width: 769px) and (max-height: 442px) {
+  /* line 1, ../sass/_video.sass */
+  #video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
+
+/* line 16, ../sass/_video.sass */
+#post-video {
+  position: relative;
+  top: 41px;
+}
+
+/* line 1, ../sass/_modelinfo.sass */
+#modelinfo {
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
   transition-property: transform;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
   -webkit-transform-origin: top left;
   -moz-transform-origin: top left;
   -ms-transform-origin: top left;
   -o-transform-origin: top left;
   transform-origin: top left;
-  -webkit-transform: scale(0.69231);
-  -moz-transform: scale(0.69231);
-  -ms-transform: scale(0.69231);
-  -o-transform: scale(0.69231);
-  transform: scale(0.69231);
-  width: 100%;
-  height: 100%;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
+  z-index: 10;
 }
-/* line 63, ../sass/screen.sass */
-.fullscreen #video {
-  -webkit-transform: scale(1);
-  -moz-transform: scale(1);
-  -ms-transform: scale(1);
-  -o-transform: scale(1);
-  transform: scale(1);
+/* line 10, ../sass/_modelinfo.sass */
+#modelinfo i + i {
+  margin-left: 0.25em;
+}
+/* line 13, ../sass/_modelinfo.sass */
+#modelinfo .rating-stars {
+  margin-left: 1em;
+}
+/* line 16, ../sass/_modelinfo.sass */
+#modelinfo .rating-stars i {
+  background-color: #fdee00;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#FFFDEE00', endColorstr='#FFDE9200');
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #fdee00), color-stop(100%, #de9200));
+  background-image: -webkit-linear-gradient(top, #fdee00 0%, #de9200 100%);
+  background-image: -moz-linear-gradient(top, #fdee00 0%, #de9200 100%);
+  background-image: -o-linear-gradient(top, #fdee00 0%, #de9200 100%);
+  background-image: linear-gradient(top, #fdee00 0%, #de9200 100%);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@media screen and (min-width: 769px) and (max-height: 442px) {
+  /* line 23, ../sass/_modelinfo.sass */
+  .modelinfo-hidden #modelinfo {
+    -webkit-transform: translateY(-100%);
+    -moz-transform: translateY(-100%);
+    -ms-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+/* line 27, ../sass/_modelinfo.sass */
+#modelinfo .icon-heart, #modelinfo .icon-remove-sign {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 32, ../sass/_modelinfo.sass */
+#modelinfo .icon-envelope {
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+/* line 38, ../sass/_modelinfo.sass */
+#modelinfo .pull-right .brand {
+  padding-right: 0;
 }
 
-/* line 1, ../sass/_info.sass */
-#info {
-  -webkit-transition-property: -webkit-transform, width;
-  -moz-transition-property: -moz-transform, width;
-  -o-transition-property: -o-transform, width;
-  transition-property: transform width;
-  -webkit-transition-duration: 0.4s;
-  -moz-transition-duration: 0.4s;
-  -o-transition-duration: 0.4s;
-  transition-duration: 0.4s;
-  -webkit-transform-origin: top left;
-  -moz-transform-origin: top left;
-  -ms-transform-origin: top left;
-  -o-transform-origin: top left;
-  transform-origin: top left;
-  position: absolute;
-  z-index: 10;
-  width: 69.23077%;
-  @inclue translateZ(0);
+/* line 1, ../sass/_bio.sass */
+#bio {
+  position: relative;
+  background-color: #cccccc;
+  padding-bottom: 50px;
+  display: none;
 }
-/* line 10, ../sass/_info.sass */
-.fullscreen #info {
-  width: 100%;
+@media screen and (min-width: 769px) {
+  /* line 1, ../sass/_bio.sass */
+  #bio {
+    top: 41px;
+  }
 }
-/* line 13, ../sass/_info.sass */
-.info-hidden #info {
-  -webkit-transform: translateY(-100%);
-  -moz-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  -o-transform: translateY(-100%);
-  transform: translateY(-100%);
+@media screen and (min-width: 769px) {
+  /* line 10, ../sass/_bio.sass */
+  .hd-video #bio {
+    display: block;
+  }
+}
+@media screen and (min-width: 769px) and (max-height: 442px) {
+  /* line 10, ../sass/_bio.sass */
+  .hd-video #bio {
+    display: none;
+  }
 }

@@ -1,0 +1,39 @@
+#modelinfo
+  @include transition-property(transform)
+  @include transform-origin(top, left)
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 10
+
+  i + i
+    margin-left: .25em
+
+  .rating-stars
+    margin-left: 1em
+
+    i
+      background-color: #fdee00
+      @include filter-gradient(#fdee00, #de9200, vertical)
+      @include background-image(linear-gradient(top,  #fdee00 0%,#de9200 100%))
+      @include background-clip(text)
+      -webkit-text-fill-color: transparent
+
+  .modelinfo-hidden &
+    @include landscape-small
+      @include translateY(-100%)
+
+  .icon-heart, .icon-remove-sign
+    @extend .btn-danger
+    @include background-clip(text)
+    -webkit-text-fill-color: transparent
+
+  .icon-envelope
+    @extend .btn-primary
+    @include background-clip(text)
+    -webkit-text-fill-color: transparent
+
+  .pull-right
+    .brand
+      padding-right: 0
