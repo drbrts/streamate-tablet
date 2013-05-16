@@ -6242,8 +6242,8 @@ body {
   left: 0;
   width: 100%;
   z-index: 10;
-  opacity: 0.5;
-  filter: alpha(opacity=50);
+  opacity: 0.8;
+  filter: alpha(opacity=80);
 }
 /* line 11, ../sass/_modelinfo.sass */
 #modelinfo i + i {
